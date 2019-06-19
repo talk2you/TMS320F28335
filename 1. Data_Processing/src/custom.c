@@ -5,16 +5,18 @@
  *      Author: JJang
  */
 
+/* ------------------------------------------------
+ * # Custom 함수
+ * ------------------------------------------------
+ * @ atoi			: ASCII to Int
+ * @ itoa			: Int to ASCII
+ * @ cst_vsprintf	: custom vsprintf
+------------------------------------------------ */
+
 #include "custom.h"
 #include "string.h"
 
-/* ------------------------------------------------
- * # Customize atoi #
- * ------------------------------------------------
- * ASCII to Int 함수
- * stdlib.h의 atoi를 사용하는것보다 279byte 절약
------------------------------------------------- */
-
+//stdlib.h의 atoi를 사용하는것보다 279byte 절약
 int atoi(char const *c)
 {
 	int value = 0;
@@ -35,17 +37,11 @@ int atoi(char const *c)
 	return value*positive;
 }
 
-/* ------------------------------------------------
- * # Customize itoa #
- * ------------------------------------------------
- * Int to ASCII 함수
- * stdlib.h의 ltoa를 사용하는것보다 43byte 절약
------------------------------------------------- */
-
+//stdlib.h의 ltoa를 사용하는것보다 43byte 절약
 char *itoa( char *a, int i)
 {
 	int sign=0;
-	char buf[16];
+	char buf[16] = {0,};
 	char *ptr;
 
 	ptr = buf;
@@ -76,14 +72,8 @@ char *itoa( char *a, int i)
 	return a;
 }
 
-/* ------------------------------------------------
- * # Customize vsprintf #
- * ------------------------------------------------
- * 소수를 제외한 정수, ASCII문자, 문자열 표시 가능
- * stdio.h의 vsnprintf() 를 사용하는 것보다 4375byte 절약
------------------------------------------------- */
-
-long custom_vsprintf(char* buf, char* format, char* arg)
+//stdio.h의 vsnprintf() 를 사용하는 것보다 4375byte 절약
+long cst_vsprintf(char* buf, char* format, char* arg)
 {
 	char *start=buf;
 	char *p;

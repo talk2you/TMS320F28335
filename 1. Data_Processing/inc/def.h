@@ -15,6 +15,5 @@
 #include "com.h"
 #include "sci.h"
 #include "stdarg.h"
-//#include "stdio.h"
 
 #endif /* INC_DEF_H_ */

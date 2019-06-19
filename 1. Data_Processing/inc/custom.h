@@ -12,6 +12,6 @@
 
 int atoi(char const *c);
 char *itoa( char *a, int i);
-long custom_vsprintf(char* buf, char* format, char* arg);
+long cst_vsprintf(char* buf, char* format, char* arg);
 
 #endif /* INC_CUSTOM_H_ */

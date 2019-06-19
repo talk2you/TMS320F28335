@@ -1,10 +1,10 @@
 ******************************************************************************
              TMS320C2000 Linker PC v15.12.7                    
 ******************************************************************************
->> Linked Tue Jun 18 14:02:13 2019
+>> Linked Wed Jun 19 13:23:47 2019
 
 OUTPUT FILE NAME:   <1. Data_Processing.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 00008883
+ENTRY POINT SYMBOL: "_c_int00"  address: 00008888
 
 
 MEMORY CONFIGURATION
@@ -14,7 +14,7 @@ MEMORY CONFIGURATION
 PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM                  00000050   000007b0  00000300  000004b0  RWIX
-  RAML                  00008000   00008000  00001463  00006b9d  RWIX
+  RAML                  00008000   00008000  00001468  00006b98  RWIX
   ZONE7A                00200000   0000fc00  00000000  0000fc00  RWIX
   CSM_RSVD              0033ff80   00000076  00000000  00000076  RWIX
   CSM_PWL               0033fff8   00000008  00000000  00000008  RWIX
@@ -92,52 +92,49 @@ codestart
 .stack     0    00000050    00000300     UNINITIALIZED
                   00000050    00000300     --HOLE--
 
-.text      0    00008000    00000b7b     
+.text      0    00008000    00000b80     
                   00008000    00000316     DSP2833x_DefaultIsr.obj (.text:retain)
                   00008316    0000011d     C28x_FPU_Lib.lib : RFFT_f32.obj (.text)
                   00008433    000000fd     DSP2833x_SysCtrl.obj (.text)
                   00008530    000000cd     fft.obj (.text)
                   000085fd    00000086     main.obj (.text)
-                  00008683    00000079     custom.obj (.text)
-                  000086fc    00000070     C28x_FPU_Lib.lib : RFFT_f32_sincostable.obj (.text)
-                  0000876c    00000061     rts2800_fpu32.lib : s_cosf.obj (.text)
-                  000087cd    0000005e     sci.obj (.text)
-                  0000882b    00000058     rts2800_fpu32.lib : s_sinf.obj (.text)
-                  00008883    00000056                       : boot.obj (.text)
-                  000088d9    0000004b     cpu0_timer.obj (.text)
-                  00008924    00000046     rts2800_fpu32.lib : cpy_tbl.obj (.text)
-                  0000896a    00000044     C28x_FPU_Lib.lib : RFFT_f32_mag.obj (.text)
-                  000089ae    0000003d     sci.obj (.text:retain)
-                  000089eb    00000039     com.obj (.text)
-                  00008a24    00000034     DSP2833x_CpuTimers.obj (.text)
-                  00008a58    00000029     rts2800_fpu32.lib : exit.obj (.text)
-                  00008a81    00000028     DSP2833x_PieCtrl.obj (.text)
-                  00008aa9    00000001     rts2800_fpu32.lib : _lock.obj (.text)
-                  00008aaa    00000025                       : e_sqrtf.obj (.text)
-                  00008acf    00000022                       : i_div.obj (.text)
-                  00008af1    0000001a                       : cpy_utils.obj (.text)
-                  00008b0b    00000019                       : args_main.obj (.text)
-                  00008b24    00000019                       : prolog.obj (.text)
-                  00008b3d    00000016     cpu0_timer.obj (.text:retain)
-                  00008b53    00000011     DSP2833x_PieVect.obj (.text)
-                  00008b64    0000000c     rts2800_fpu32.lib : epilog.obj (.text)
-                  00008b70    00000008     DSP2833x_CodeStartBranch.obj (.text)
-                  00008b78    00000002     rts2800_fpu32.lib : pre_init.obj (.text)
-                  00008b7a    00000001                       : startup.obj (.text)
+                  00008683    0000007e     custom.obj (.text)
+                  00008701    00000070     C28x_FPU_Lib.lib : RFFT_f32_sincostable.obj (.text)
+                  00008771    00000061     rts2800_fpu32.lib : s_cosf.obj (.text)
+                  000087d2    0000005e     sci.obj (.text)
+                  00008830    00000058     rts2800_fpu32.lib : s_sinf.obj (.text)
+                  00008888    00000056                       : boot.obj (.text)
+                  000088de    0000004b     cpu0_timer.obj (.text)
+                  00008929    00000046     rts2800_fpu32.lib : cpy_tbl.obj (.text)
+                  0000896f    00000044     C28x_FPU_Lib.lib : RFFT_f32_mag.obj (.text)
+                  000089b3    0000003d     sci.obj (.text:retain)
+                  000089f0    00000039     com.obj (.text)
+                  00008a29    00000034     DSP2833x_CpuTimers.obj (.text)
+                  00008a5d    00000029     rts2800_fpu32.lib : exit.obj (.text)
+                  00008a86    00000028     DSP2833x_PieCtrl.obj (.text)
+                  00008aae    00000025     rts2800_fpu32.lib : e_sqrtf.obj (.text)
+                  00008ad3    00000022                       : i_div.obj (.text)
+                  00008af5    0000001a                       : cpy_utils.obj (.text)
+                  00008b0f    00000019                       : args_main.obj (.text)
+                  00008b28    00000019                       : prolog.obj (.text)
+                  00008b41    00000016     cpu0_timer.obj (.text:retain)
+                  00008b57    00000011     DSP2833x_PieVect.obj (.text)
+                  00008b68    0000000c     rts2800_fpu32.lib : epilog.obj (.text)
+                  00008b74    00000008     DSP2833x_CodeStartBranch.obj (.text)
+                  00008b7c    00000002     rts2800_fpu32.lib : pre_init.obj (.text)
+                  00008b7e    00000001                       : _lock.obj (.text)
+                  00008b7f    00000001                       : startup.obj (.text)
 
-.ebss      0    00008b7c    0000007e     UNINITIALIZED
-                  00008b7c    00000003     sci.obj (.ebss)
-                  00008b7f    00000001     rts2800_fpu32.lib : errno.obj (.ebss)
+.ebss      0    00008b80    0000007e     UNINITIALIZED
                   00008b80    00000026     com.obj (.ebss)
                   00008ba6    0000001a     cpu0_timer.obj (.ebss)
                   00008bc0    00000018     DSP2833x_CpuTimers.obj (.ebss)
                   00008bd8    00000018     fft.obj (.ebss)
                   00008bf0    00000006     rts2800_fpu32.lib : exit.obj (.ebss)
-                  00008bf6    00000002                       : _lock.obj (.ebss:__lock)
-                  00008bf8    00000002                       : _lock.obj (.ebss:__unlock)
-
-ramfuncs   0    00008bfa    00000004     
-                  00008bfa    00000004     DSP2833x_usDelay.obj (ramfuncs)
+                  00008bf6    00000003     sci.obj (.ebss)
+                  00008bf9    00000001     rts2800_fpu32.lib : errno.obj (.ebss)
+                  00008bfa    00000002                       : _lock.obj (.ebss:__lock)
+                  00008bfc    00000002                       : _lock.obj (.ebss:__unlock)
 
 RFFTdata1 
 *          0    00008c00    00000200     UNINITIALIZED
@@ -155,6 +152,9 @@ RFFTdata4
                   00009200    00000100     DSP2833x_PieVect.obj (.econst:_PieVectTableInit)
                   00009300    00000012     main.obj (.econst:.string)
                   00009312    00000002     fft.obj (.econst)
+
+ramfuncs   0    00009314    00000004     
+                  00009314    00000004     DSP2833x_usDelay.obj (ramfuncs)
 
 RFFTdata3 
 *          0    00009340    00000102     UNINITIALIZED
@@ -401,14 +401,14 @@ MODULE SUMMARY
        fft.obj                                  205    0         1820   
        sci.obj                                  155    0         3      
        main.obj                                 134    0         18     
+       custom.obj                               126    0         0      
        cpu0_timer.obj                           97     0         26     
-       custom.obj                               121    0         0      
        com.obj                                  57     0         38     
     +--+----------------------------------------+------+---------+---------+
-       Total:                                   769    0         1905   
+       Total:                                   774    0         1905   
                                                                         
     C:\Users\JJang\AppData\Local\Temp\
-       {D9D2F951-B63D-4358-A4DF-B1A551F837BF}   0      0         64     
+       {83E63CC5-9890-4E26-9CEC-0005DF8927B0}   0      0         64     
     +--+----------------------------------------+------+---------+---------+
        Total:                                   0      0         64     
                                                                         
@@ -440,7 +440,7 @@ MODULE SUMMARY
                                                                         
        Stack:                                   0      0         768    
     +--+----------------------------------------+------+---------+---------+
-       Grand Total:                             2952   0         5721   
+       Grand Total:                             2957   0         5721   
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -535,11 +535,6 @@ address     data page           name
 
 00007900     1e4 (00007900)     _I2caRegs
 
-00008b7c     22d (00008b40)     _SCI_RXintCount
-00008b7d     22d (00008b40)     _SCI_RxFlag
-00008b7e     22d (00008b40)     _SCI_TXintCount
-00008b7f     22d (00008b40)     _errno
-
 00008b80     22e (00008b80)     _MCU_Receive
 00008b81     22e (00008b80)     _adc1
 00008b82     22e (00008b80)     _adcstat
@@ -548,13 +543,13 @@ address     data page           name
 00008b86     22e (00008b80)     _buf
 00008b90     22e (00008b80)     _que
 00008ba6     22e (00008b80)     _Cpu_Clk
-00008ba8     22e (00008b80)     _Cpu_Prd
-00008baa     22e (00008b80)     _Cpu_cnt
-00008bac     22e (00008b80)     _temp_num
-00008bb6     22e (00008b80)     _Timer_Prd
+00008ba8     22e (00008b80)     _Cpu_cnt
+00008baa     22e (00008b80)     _Cpu_Prd
+00008bac     22e (00008b80)     _Timer_Prd
+00008bb6     22e (00008b80)     _temp_num
 
-00008bc0     22f (00008bc0)     _CpuTimer1
-00008bc8     22f (00008bc0)     _CpuTimer0
+00008bc0     22f (00008bc0)     _CpuTimer0
+00008bc8     22f (00008bc0)     _CpuTimer1
 00008bd0     22f (00008bc0)     _CpuTimer2
 00008bd8     22f (00008bc0)     _Rad
 00008bda     22f (00008bc0)     _freq_point
@@ -562,8 +557,12 @@ address     data page           name
 00008bf0     22f (00008bc0)     ___TI_enable_exit_profile_output
 00008bf2     22f (00008bc0)     ___TI_cleanup_ptr
 00008bf4     22f (00008bc0)     ___TI_dtors_ptr
-00008bf6     22f (00008bc0)     __lock
-00008bf8     22f (00008bc0)     __unlock
+00008bf6     22f (00008bc0)     _SCI_RXintCount
+00008bf7     22f (00008bc0)     _SCI_RxFlag
+00008bf8     22f (00008bc0)     _SCI_TXintCount
+00008bf9     22f (00008bc0)     _errno
+00008bfa     22f (00008bc0)     __lock
+00008bfc     22f (00008bc0)     __unlock
 
 00008c00     230 (00008c00)     _RFFTin1Buff
 
@@ -587,25 +586,25 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                                  
 ----  -------   ----                                  
 0     00008000  .text                                 
-0     00008a58  C$$EXIT                               
-0     00008acf  I$$DIV                                
-0     00008ae0  I$$MOD                                
+0     00008a5d  C$$EXIT                               
+0     00008ad3  I$$DIV                                
+0     00008ae4  I$$MOD                                
 0     0000830c  _ADCINT_ISR                           
 0     00380080  _ADC_cal                              
 1     00000b00  _AdcMirror                            
 1     00007100  _AdcRegs                              
 0     00008530  _Analysis_freq                        
-0     00008a37  _ConfigCpuTimer                       
-0     00008804  _ConfigSciPin                         
-0     00008bc8  _CpuTimer0                            
+0     00008a3c  _ConfigCpuTimer                       
+0     00008809  _ConfigSciPin                         
+0     00008bc0  _CpuTimer0                            
 1     00000c00  _CpuTimer0Regs                        
-0     00008bc0  _CpuTimer1                            
+0     00008bc8  _CpuTimer1                            
 1     00000c08  _CpuTimer1Regs                        
 0     00008bd0  _CpuTimer2                            
 1     00000c10  _CpuTimer2Regs                        
 0     00008ba6  _Cpu_Clk                              
-0     00008ba8  _Cpu_Prd                              
-0     00008baa  _Cpu_cnt                              
+0     00008baa  _Cpu_Prd                              
+0     00008ba8  _Cpu_cnt                              
 1     0033fff8  _CsmPwl                               
 1     00000ae0  _CsmRegs                              
 0     00008502  _CsmUnlock                            
@@ -616,7 +615,7 @@ page  address   name
 0     000082da  _DINTCH4_ISR                          
 0     000082d0  _DINTCH5_ISR                          
 0     000082c6  _DINTCH6_ISR                          
-0     00008bfa  _DSP28x_usDelay                       
+0     00009314  _DSP28x_usDelay                       
 1     00000880  _DevEmuRegs                           
 0     0000843d  _DisableDog                           
 1     00001000  _DmaRegs                              
@@ -669,8 +668,8 @@ page  address   name
 0     000081cc  _EQEP2_INT_ISR                        
 1     00006b00  _EQep1Regs                            
 1     00006b40  _EQep2Regs                            
-0     00008aa0  _EnableInterrupts                     
-0     00008a08  _Enque                                
+0     00008aa5  _EnableInterrupts                     
+0     00008a0d  _Enque                                
 0     000085e6  _FFT_init                             
 0     0000856e  _FFTtest                              
 1     00000a80  _FlashRegs                            
@@ -683,12 +682,12 @@ page  address   name
 0     000081ae  _ILLEGAL_ISR                          
 0     000081a4  _INT13_ISR                            
 0     0000819a  _INT14_ISR                            
-0     00008a24  _InitCpuTimers                        
+0     00008a29  _InitCpuTimers                        
 0     00008493  _InitPeripheralClocks                 
-0     00008a81  _InitPieCtrl                          
-0     00008b53  _InitPieVectTable                     
+0     00008a86  _InitPieCtrl                          
+0     00008b57  _InitPieVectTable                     
 0     00008445  _InitPll                              
-0     000087cd  _InitSCI                              
+0     000087d2  _InitSCI                              
 0     000084f9  _InitSysCtrl                          
 0     00008190  _LUF_ISR                              
 0     00008186  _LVF_ISR                              
@@ -707,8 +706,8 @@ page  address   name
 0     00009200  _PieVectTableInit                     
 0     00009000  _RFFTF32Coef                          
 0     00008316  _RFFT_f32                             
-0     0000896a  _RFFT_f32_mag                         
-0     000086fc  _RFFT_f32_sincostable                 
+0     0000896f  _RFFT_f32_mag                         
+0     00008701  _RFFT_f32_sincostable                 
 0     00008c00  _RFFTin1Buff                          
 0     00009340  _RFFTmagBuff                          
 0     00008e00  _RFFToutBuff                          
@@ -721,9 +720,9 @@ page  address   name
 0     00008118  _SCITXINTA_ISR                        
 0     0000810e  _SCITXINTB_ISR                        
 0     00008104  _SCITXINTC_ISR                        
-0     00008b7c  _SCI_RXintCount                       
-0     00008b7d  _SCI_RxFlag                           
-0     00008b7e  _SCI_TXintCount                       
+0     00008bf6  _SCI_RXintCount                       
+0     00008bf7  _SCI_RxFlag                           
+0     00008bf8  _SCI_TXintCount                       
 0     000080fa  _SEQ1INT_ISR                          
 0     000080f0  _SEQ2INT_ISR                          
 0     000080e6  _SPIRXINTA_ISR                        
@@ -731,12 +730,12 @@ page  address   name
 1     00007050  _SciaRegs                             
 1     00007750  _ScibRegs                             
 1     00007770  _ScicRegs                             
-0     000089eb  _SendToPc                             
+0     000089f0  _SendToPc                             
 0     00008433  _ServiceDog                           
 1     00007040  _SpiaRegs                             
 1     00007010  _SysCtrlRegs                          
 0     000080d2  _TINT0_ISR                            
-0     00008bb6  _Timer_Prd                            
+0     00008bac  _Timer_Prd                            
 0     000080c8  _USER10_ISR                           
 0     000080be  _USER11_ISR                           
 0     000080b4  _USER12_ISR                           
@@ -770,58 +769,58 @@ abs   ffffffff  ___TI_prof_data_start
 abs   ffffffff  ___binit__                            
 abs   ffffffff  ___c_args__                           
 0     00009442  ___cinit__                            
-0     00008b7b  ___etext__                            
+0     00008b80  ___etext__                            
 abs   ffffffff  ___pinit__                            
 0     00008000  ___text__                             
-0     00008b0b  __args_main                           
-0     00008bf6  __lock                                
-0     00008aa9  __nop                                 
+0     00008b0f  __args_main                           
+0     00008bfa  __lock                                
+0     00008b7e  __nop                                 
 0     00000050  __stack                               
-0     00008b7a  __system_post_cinit                   
-0     00008b78  __system_pre_init                     
-0     00008bf8  __unlock                              
-0     00008a58  _abort                                
+0     00008b7f  __system_post_cinit                   
+0     00008b7c  __system_pre_init                     
+0     00008bfc  __unlock                              
+0     00008a5d  _abort                                
 0     00008b81  _adc1                                 
 0     00008b83  _adc2                                 
 0     00008b82  _adcstat                              
 0     00008b84  _ap                                   
 0     00008b86  _buf                                  
-0     00008883  _c_int00                              
-0     000088d9  _cal_Timer_Prd                        
-0     00008924  _copy_in                              
-0     0000876c  _cos                                  
-0     0000876c  _cosf                                 
-0     00008b3d  _cpu_timer0_isr                       
-0     000086d0  _custom_vsprintf                      
-0     00008af1  _ddcopy                               
-0     00008af1  _dpcopy                               
-0     00008b64  _epilog_c28x_1                        
-0     00008b68  _epilog_c28x_2                        
-0     00008b7f  _errno                                
-0     00008a5a  _exit                                 
+0     00008888  _c_int00                              
+0     000088de  _cal_Timer_Prd                        
+0     00008929  _copy_in                              
+0     00008771  _cos                                  
+0     00008771  _cosf                                 
+0     00008b41  _cpu_timer0_isr                       
+0     000086d5  _cst_vsprintf                         
+0     00008af5  _ddcopy                               
+0     00008af5  _dpcopy                               
+0     00008b68  _epilog_c28x_1                        
+0     00008b6c  _epilog_c28x_2                        
+0     00008bf9  _errno                                
+0     00008a5f  _exit                                 
 0     00008bda  _freq_point                           
 0     00008683  _itoa                                 
 0     000085fd  _main                                 
-0     00008af1  _pdcopy                               
-0     00008af1  _ppcopy                               
-0     00008b24  _prolog_c28x_1                        
-0     00008b28  _prolog_c28x_2                        
-0     00008b30  _prolog_c28x_3                        
+0     00008af5  _pdcopy                               
+0     00008af5  _ppcopy                               
+0     00008b28  _prolog_c28x_1                        
+0     00008b2c  _prolog_c28x_2                        
+0     00008b34  _prolog_c28x_3                        
 0     00008b90  _que                                  
 0     00008be4  _rfft                                 
 0     0000831f  _rfft_f32_Stages1and2and3andBitReverse
 0     0000838b  _rfft_f32_Stages4andUp                
 0     00008000  _rsvd_ISR                             
-0     000089ae  _scibRxIsr                            
-0     0000882b  _sin                                  
-0     0000882b  _sinf                                 
-0     00008aaa  _sqrt                                 
-0     00008aaa  _sqrtf                                
-0     00008bac  _temp_num                             
+0     000089b3  _scibRxIsr                            
+0     00008830  _sin                                  
+0     00008830  _sinf                                 
+0     00008aae  _sqrt                                 
+0     00008aae  _sqrtf                                
+0     00008bb6  _temp_num                             
 abs   ffffffff  binit                                 
 0     00009442  cinit                                 
 0     00000000  code_start                            
-0     00008b7b  etext                                 
+0     00008b80  etext                                 
 abs   ffffffff  pinit                                 
 
 
@@ -927,54 +926,50 @@ page  address   name
 0     000085e6  _FFT_init                             
 0     000085fd  _main                                 
 0     00008683  _itoa                                 
-0     000086d0  _custom_vsprintf                      
-0     000086fc  _RFFT_f32_sincostable                 
-0     0000876c  _cos                                  
-0     0000876c  _cosf                                 
-0     000087cd  _InitSCI                              
-0     00008804  _ConfigSciPin                         
-0     0000882b  _sin                                  
-0     0000882b  _sinf                                 
-0     00008883  _c_int00                              
-0     000088d9  _cal_Timer_Prd                        
-0     00008924  _copy_in                              
-0     0000896a  _RFFT_f32_mag                         
-0     000089ae  _scibRxIsr                            
-0     000089eb  _SendToPc                             
-0     00008a08  _Enque                                
-0     00008a24  _InitCpuTimers                        
-0     00008a37  _ConfigCpuTimer                       
-0     00008a58  C$$EXIT                               
-0     00008a58  _abort                                
-0     00008a5a  _exit                                 
-0     00008a81  _InitPieCtrl                          
-0     00008aa0  _EnableInterrupts                     
-0     00008aa9  __nop                                 
-0     00008aaa  _sqrt                                 
-0     00008aaa  _sqrtf                                
-0     00008acf  I$$DIV                                
-0     00008ae0  I$$MOD                                
-0     00008af1  _ddcopy                               
-0     00008af1  _dpcopy                               
-0     00008af1  _pdcopy                               
-0     00008af1  _ppcopy                               
-0     00008b0b  __args_main                           
-0     00008b24  _prolog_c28x_1                        
-0     00008b28  _prolog_c28x_2                        
-0     00008b30  _prolog_c28x_3                        
-0     00008b3d  _cpu_timer0_isr                       
-0     00008b53  _InitPieVectTable                     
-0     00008b64  _epilog_c28x_1                        
-0     00008b68  _epilog_c28x_2                        
-0     00008b78  __system_pre_init                     
-0     00008b7a  __system_post_cinit                   
-0     00008b7b  ___etext__                            
-0     00008b7b  etext                                 
-0     00008b7c  _SCI_RXintCount                       
-0     00008b7d  _SCI_RxFlag                           
-0     00008b7e  _SCI_TXintCount                       
-0     00008b7f  _errno                                
+0     000086d5  _cst_vsprintf                         
+0     00008701  _RFFT_f32_sincostable                 
+0     00008771  _cos                                  
+0     00008771  _cosf                                 
+0     000087d2  _InitSCI                              
+0     00008809  _ConfigSciPin                         
+0     00008830  _sin                                  
+0     00008830  _sinf                                 
+0     00008888  _c_int00                              
+0     000088de  _cal_Timer_Prd                        
+0     00008929  _copy_in                              
+0     0000896f  _RFFT_f32_mag                         
+0     000089b3  _scibRxIsr                            
+0     000089f0  _SendToPc                             
+0     00008a0d  _Enque                                
+0     00008a29  _InitCpuTimers                        
+0     00008a3c  _ConfigCpuTimer                       
+0     00008a5d  C$$EXIT                               
+0     00008a5d  _abort                                
+0     00008a5f  _exit                                 
+0     00008a86  _InitPieCtrl                          
+0     00008aa5  _EnableInterrupts                     
+0     00008aae  _sqrt                                 
+0     00008aae  _sqrtf                                
+0     00008ad3  I$$DIV                                
+0     00008ae4  I$$MOD                                
+0     00008af5  _ddcopy                               
+0     00008af5  _dpcopy                               
+0     00008af5  _pdcopy                               
+0     00008af5  _ppcopy                               
+0     00008b0f  __args_main                           
+0     00008b28  _prolog_c28x_1                        
+0     00008b2c  _prolog_c28x_2                        
+0     00008b34  _prolog_c28x_3                        
+0     00008b41  _cpu_timer0_isr                       
+0     00008b57  _InitPieVectTable                     
+0     00008b68  _epilog_c28x_1                        
+0     00008b6c  _epilog_c28x_2                        
+0     00008b7c  __system_pre_init                     
+0     00008b7e  __nop                                 
+0     00008b7f  __system_post_cinit                   
 0     00008b80  _MCU_Receive                          
+0     00008b80  ___etext__                            
+0     00008b80  etext                                 
 0     00008b81  _adc1                                 
 0     00008b82  _adcstat                              
 0     00008b83  _adc2                                 
@@ -982,12 +977,12 @@ page  address   name
 0     00008b86  _buf                                  
 0     00008b90  _que                                  
 0     00008ba6  _Cpu_Clk                              
-0     00008ba8  _Cpu_Prd                              
-0     00008baa  _Cpu_cnt                              
-0     00008bac  _temp_num                             
-0     00008bb6  _Timer_Prd                            
-0     00008bc0  _CpuTimer1                            
-0     00008bc8  _CpuTimer0                            
+0     00008ba8  _Cpu_cnt                              
+0     00008baa  _Cpu_Prd                              
+0     00008bac  _Timer_Prd                            
+0     00008bb6  _temp_num                             
+0     00008bc0  _CpuTimer0                            
+0     00008bc8  _CpuTimer1                            
 0     00008bd0  _CpuTimer2                            
 0     00008bd8  _Rad                                  
 0     00008bda  _freq_point                           
@@ -995,14 +990,18 @@ page  address   name
 0     00008bf0  ___TI_enable_exit_profile_output      
 0     00008bf2  ___TI_cleanup_ptr                     
 0     00008bf4  ___TI_dtors_ptr                       
-0     00008bf6  __lock                                
-0     00008bf8  __unlock                              
-0     00008bfa  _DSP28x_usDelay                       
+0     00008bf6  _SCI_RXintCount                       
+0     00008bf7  _SCI_RxFlag                           
+0     00008bf8  _SCI_TXintCount                       
+0     00008bf9  _errno                                
+0     00008bfa  __lock                                
+0     00008bfc  __unlock                              
 0     00008c00  _RFFTin1Buff                          
 0     00008e00  _RFFToutBuff                          
 0     00009000  _RFFTF32Coef                          
 0     00009200  _PieVectTableInit                     
 0     00009312  _RadStep                              
+0     00009314  _DSP28x_usDelay                       
 0     00009340  _RFFTmagBuff                          
 0     00009442  ___cinit__                            
 0     00009442  cinit                                 
